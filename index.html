@@ -1586,43 +1586,76 @@ async function submitRating() {
   const state = document.getElementById('rys-state').value;
 
   if (!state) {
-    alert('Macha, select your state first! 🗳️');
+    alert('Select State');
     return;
   }
 
-  const { data, error } = await supabase
+  const avgRating =
+    (ratings.education +
+     ratings.roads +
+     ratings.water +
+     ratings.healthcare +
+     ratings.jobs) / 5;
+
+  const { data } = await supabase
     .from('state_votes')
     .select('*')
     .eq('state', state);
 
-  if (error) {
-    console.error(error);
-    alert('Database error!');
-    return;
-  }
-
   if (data && data.length > 0) {
 
-    const currentVotes = data[0].votes || 0;
-
-    const { error: updateError } = await supabase
+    await supabase
       .from('state_votes')
       .update({
-        votes: currentVotes + 1
+        votes: (data[0].votes || 0) + 1
       })
       .eq('state', state);
 
-    if (updateError) {
-      console.error(updateError);
-      alert('Vote update failed!');
-      return;
-    }
+  } else {
+
+    await supabase
+      .from('state_votes')
+      .insert({
+        state: state,
+        votes: 1
+      });
+
   }
 
-  document.getElementById('rys-form-inner').style.display = 'none';
-  document.getElementById('rys-thanks').style.display = 'block';
+  const { data: rankData } = await supabase
+    .from('state_rankings')
+    .select('*')
+    .eq('state', state);
 
-  alert('Vote saved to CJP Database ');
+  if (rankData && rankData.length > 0) {
+
+    await supabase
+      .from('state_rankings')
+      .update({
+        education: ratings.education,
+        roads: ratings.roads,
+        water: ratings.water,
+        healthcare: ratings.healthcare,
+        jobs: ratings.jobs
+      })
+      .eq('state', state);
+
+  } else {
+
+    await supabase
+      .from('state_rankings')
+      .insert({
+        state: state,
+        education: ratings.education,
+        roads: ratings.roads,
+        water: ratings.water,
+        healthcare: ratings.healthcare,
+        jobs: ratings.jobs
+      });
+
+  }
+
+  alert('Vote Saved Successfully ');
 }
 function showLb(panel,el){
   document.querySelectorAll('[id^="lb-"]').forEach(p=>p.classList.remove('active'));
