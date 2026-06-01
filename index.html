@@ -1541,15 +1541,48 @@ function rateStar(star,val){
   ratings[cat]=val;
   grp.querySelectorAll('.star').forEach((s,i)=>{s.classList.toggle('lit',i<val);});
 }
-function submitRating(){
-  const state=document.getElementById('rys-state').value;
-  if(!state){alert('Macha, select your state first! 🪳');return;}
-  const total=Object.values(ratings).reduce((a,b)=>a+b,0);
-  if(total===0){alert('At least one category rate panunga! 🪳');return;}
-  document.getElementById('rys-form-inner').style.display='none';
-  document.getElementById('rys-thanks').style.display='block';
-  const current=parseInt(document.getElementById('total-votes-count').textContent.replace(',',''));
-  document.getElementById('total-votes-count').textContent=(current+1).toLocaleString();
+async function submitRating() {
+
+  const state = document.getElementById('rys-state').value;
+
+  if (!state) {
+    alert('Macha, select your state first! 🗳️');
+    return;
+  }
+
+  const { data, error } = await supabase
+    .from('state_votes')
+    .select('*')
+    .eq('state', state);
+
+  if (error) {
+    console.error(error);
+    alert('Database error!');
+    return;
+  }
+
+  if (data && data.length > 0) {
+
+    const currentVotes = data[0].votes || 0;
+
+    const { error: updateError } = await supabase
+      .from('state_votes')
+      .update({
+        votes: currentVotes + 1
+      })
+      .eq('state', state);
+
+    if (updateError) {
+      console.error(updateError);
+      alert('Vote update failed!');
+      return;
+    }
+  }
+
+  document.getElementById('rys-form-inner').style.display = 'none';
+  document.getElementById('rys-thanks').style.display = 'block';
+
+  alert('Vote saved to CJP Database ');
 }
 function showLb(panel,el){
   document.querySelectorAll('[id^="lb-"]').forEach(p=>p.classList.remove('active'));
