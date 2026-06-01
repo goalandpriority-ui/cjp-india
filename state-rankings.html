@@ -3,28 +3,274 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>State Rankings</title>
+<title>CJP State Rankings</title>
+
+<style>
+
+:root{
+--gold:#c9a227;
+--green:#1f4d1f;
+--black:#080808;
+--text:#dddddd;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:
+radial-gradient(circle at center,
+rgba(0,120,0,.20) 0%,
+rgba(0,60,0,.08) 40%,
+#080808 75%);
+color:var(--text);
+min-height:100vh;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:60px 20px;
+}
+
+.hero{
+text-align:center;
+padding:80px 0;
+}
+
+.badge{
+display:inline-block;
+padding:10px 20px;
+background:#163616;
+border:1px solid var(--gold);
+color:var(--gold);
+letter-spacing:2px;
+font-size:.8rem;
+}
+
+.hero h1{
+font-size:4rem;
+margin:20px 0;
+color:var(--gold);
+}
+
+.hero p{
+max-width:800px;
+margin:auto;
+line-height:1.8;
+font-size:1.1rem;
+color:#bbb;
+}
+
+.section-title{
+font-size:2rem;
+color:var(--gold);
+margin-bottom:30px;
+text-align:center;
+}
+
+.rankings{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.card{
+background:#101010;
+border:1px solid rgba(201,162,39,.2);
+padding:25px;
+border-radius:12px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+border-color:var(--gold);
+}
+
+.rank{
+font-size:2rem;
+color:var(--gold);
+margin-bottom:10px;
+}
+
+.state{
+font-size:1.5rem;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+.score{
+margin-bottom:15px;
+color:#aaa;
+}
+
+.bar{
+height:12px;
+background:#222;
+border-radius:50px;
+overflow:hidden;
+}
+
+.bar span{
+display:block;
+height:100%;
+background:linear-gradient(90deg,var(--gold),#f4d03f);
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:70px;
+}
+
+.stat{
+background:#101010;
+padding:25px;
+border-radius:10px;
+border:1px solid rgba(201,162,39,.15);
+text-align:center;
+}
+
+.stat h3{
+color:var(--gold);
+margin-bottom:10px;
+}
+
+.warning{
+margin-top:60px;
+background:#2a1d00;
+border-left:4px solid var(--gold);
+padding:25px;
+line-height:1.8;
+}
+
+.footer{
+margin-top:70px;
+text-align:center;
+color:#777;
+font-size:.9rem;
+}
+
+</style>
 </head>
-<body style="background:#080808;color:white;font-family:Arial;padding:40px;max-width:900px;margin:auto;">
+<body>
 
-<h1>🏆 State Rankings</h1>
+<div class="container">
 
-<table border="1" cellpadding="10">
-<tr>
-<th>Rank</th>
-<th>State</th>
-<th>Score</th>
-</tr>
+<div class="hero">
 
-<tr><td>1</td><td>Tamil Nadu</td><td>95</td></tr>
-<tr><td>2</td><td>Karnataka</td><td>92</td></tr>
-<tr><td>3</td><td>Kerala</td><td>90</td></tr>
-<tr><td>4</td><td>Maharashtra</td><td>88</td></tr>
-<tr><td>5</td><td>Gujarat</td><td>86</td></tr>
+<div class="badge">
+🏆 LIVE STATE RANKINGS
+</div>
 
-</table>
+<h1>India's Performance Dashboard</h1>
 
-<p>Sample ranking data for demonstration purposes.</p>
+<p>
+Real citizen ratings. No political speeches.
+No fake promises. Just rankings based on
+education, healthcare, roads, jobs and governance.
+</p>
+
+</div>
+
+<h2 class="section-title">
+Top Performing States
+</h2>
+
+<div class="rankings">
+
+<div class="card">
+<div class="rank">🥇 #1</div>
+<div class="state">Tamil Nadu</div>
+<div class="score">Overall Score: 9.2 / 10</div>
+<div class="bar"><span style="width:92%"></span></div>
+</div>
+
+<div class="card">
+<div class="rank">🥈 #2</div>
+<div class="state">Karnataka</div>
+<div class="score">Overall Score: 8.8 / 10</div>
+<div class="bar"><span style="width:88%"></span></div>
+</div>
+
+<div class="card">
+<div class="rank">🥉 #3</div>
+<div class="state">Kerala</div>
+<div class="score">Overall Score: 8.6 / 10</div>
+<div class="bar"><span style="width:86%"></span></div>
+</div>
+
+<div class="card">
+<div class="rank">#4</div>
+<div class="state">Maharashtra</div>
+<div class="score">Overall Score: 8.3 / 10</div>
+<div class="bar"><span style="width:83%"></span></div>
+</div>
+
+<div class="card">
+<div class="rank">#5</div>
+<div class="state">Gujarat</div>
+<div class="score">Overall Score: 8.1 / 10</div>
+<div class="bar"><span style="width:81%"></span></div>
+</div>
+
+<div class="card">
+<div class="rank">#6</div>
+<div class="state">Telangana</div>
+<div class="score">Overall Score: 7.9 / 10</div>
+<div class="bar"><span style="width:79%"></span></div>
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h3>📚 Education Leader</h3>
+<p>Kerala</p>
+</div>
+
+<div class="stat">
+<h3>🏥 Healthcare Leader</h3>
+<p>Tamil Nadu</p>
+</div>
+
+<div class="stat">
+<h3>💼 Jobs Leader</h3>
+<p>Karnataka</p>
+</div>
+
+<div class="stat">
+<h3>🛣 Infrastructure Leader</h3>
+<p>Maharashtra</p>
+</div>
+
+</div>
+
+<div class="warning">
+
+⚠ Rankings change as more citizens vote.
+
+Unlike elections, this leaderboard updates based on public feedback,
+not political advertisements.
+
+Politicians hate transparency.
+Citizens love it.
+
+</div>
+
+<div class="footer">
+🪳 Cockroach Janata Party • State Rankings Dashboard
+</div>
+
+</div>
 
 </body>
 </html>
