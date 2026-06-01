@@ -1563,5 +1563,19 @@ const obs = new IntersectionObserver((entries)=>{
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 document.querySelectorAll('#states-south .reveal').forEach(c=>c.classList.add('visible'));
 </script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const supabaseUrl = 'https://ajaqusrkrlhrvqcazxxp.supabase.co';
+
+const supabaseKey = 'sb_publishable_hrd-_xu8uYLvRa3Gt67q4g_rR2SOot4';
+
+const supabase = window.supabase.createClient(
+  supabaseUrl,
+  supabaseKey
+);
+
+console.log("Supabase Connected");
+</script>
 </body>
 </html>
