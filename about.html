@@ -3,199 +3,132 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>About CJP | Cockroach Janata Party</title>
-
+<title>About CJP | Cockroach Janata Party – India's Citizen Accountability Platform</title>
+<meta name="description" content="Learn about the Cockroach Janata Party — a citizen-led initiative tracking Indian state governance, public accountability, education, healthcare and infrastructure performance using official data.">
 <link rel="icon" href="favicon.png">
-
 <style>
-
-:root{
---black:#080808;
---green:#234628;
---gold:#c9a227;
---text:#ddddcc;
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-background:
-radial-gradient(circle at center,
-rgba(0,120,0,.25) 0%,
-rgba(0,60,0,.12) 35%,
-#080808 75%);
-color:var(--text);
-font-family:Arial,sans-serif;
-}
-
-.container{
-max-width:1100px;
-margin:auto;
-padding:40px 20px;
-}
-
-.hero{
-text-align:center;
-padding:100px 0 60px;
-}
-
-.badge{
-display:inline-block;
-padding:10px 18px;
-background:#183816;
-border:1px solid var(--gold);
-color:var(--gold);
-letter-spacing:2px;
-font-size:.8rem;
-}
-
-.hero h1{
-font-size:4rem;
-margin-top:25px;
-color:var(--gold);
-}
-
-.hero p{
-max-width:850px;
-margin:25px auto;
-line-height:2;
-font-size:1.1rem;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-margin-top:50px;
-}
-
-.card{
-background:#111;
-border:1px solid rgba(201,162,39,.4);
-padding:30px;
-}
-
-.card h3{
-color:var(--gold);
-margin-bottom:15px;
-}
-
-.card p{
-line-height:1.9;
-}
-
-.quote{
-margin-top:60px;
-padding:40px;
-background:#111;
-border-left:5px solid var(--gold);
-font-size:1.2rem;
-line-height:2;
-}
-
-.footer{
-margin-top:80px;
-padding:40px;
-text-align:center;
-border-top:1px solid rgba(255,255,255,.08);
-}
-
-.footer h3{
-color:var(--gold);
-margin-bottom:15px;
-}
-
+:root{--black:#080808;--green:#234628;--gold:#c9a227;--goldf:#e8b82a;--text:#ddddcc;--muted:#888;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:radial-gradient(circle at center,rgba(0,120,0,.25) 0%,rgba(0,60,0,.12) 35%,#080808 75%);color:var(--text);font-family:Arial,sans-serif;line-height:1.8;}
+.nav{position:sticky;top:0;background:rgba(8,8,8,.96);padding:16px 25px;border-bottom:1px solid rgba(201,162,39,.2);z-index:999;display:flex;gap:20px;flex-wrap:wrap;}
+.nav a{color:var(--gold);text-decoration:none;font-size:.85rem;letter-spacing:1px;}
+.nav a:hover{color:var(--goldf);}
+.container{max-width:1000px;margin:auto;padding:40px 20px;}
+.hero{text-align:center;padding:80px 0 50px;}
+.badge{display:inline-block;padding:8px 20px;background:#183816;border:1px solid var(--gold);color:var(--gold);letter-spacing:3px;font-size:.7rem;text-transform:uppercase;}
+.hero h1{font-size:3rem;margin-top:20px;color:var(--gold);line-height:1.2;}
+.hero p{max-width:750px;margin:20px auto;font-size:1.05rem;color:var(--muted);}
+h2{color:var(--gold);font-size:1.8rem;margin:50px 0 20px;border-bottom:1px solid rgba(201,162,39,.3);padding-bottom:12px;}
+h3{color:var(--goldf);font-size:1.2rem;margin:30px 0 12px;}
+p{margin-bottom:18px;line-height:1.9;color:var(--text);}
+.highlight{background:#111;border-left:4px solid var(--gold);padding:20px 25px;margin:30px 0;}
+.highlight p{margin:0;font-size:1.05rem;}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin:30px 0;}
+.stat-box{background:#111;border:1px solid rgba(201,162,39,.3);padding:25px;text-align:center;}
+.stat-num{font-size:2.5rem;color:var(--gold);font-weight:bold;}
+.stat-label{font-size:.8rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:8px;}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin:30px 0;}
+.value-card{background:#0d1a0d;border:1px solid rgba(201,162,39,.25);padding:25px;}
+.value-card h3{margin-top:0;}
+.footer{margin-top:80px;padding:40px 20px;text-align:center;border-top:1px solid rgba(255,255,255,.08);color:var(--muted);font-size:.85rem;}
+.footer a{color:var(--gold);text-decoration:none;margin:0 10px;}
 </style>
 </head>
-
 <body>
-
+<nav class="nav">
+  <a href="index.html">🪳 Home</a>
+  <a href="manifesto.html">📜 Manifesto</a>
+  <a href="state-rankings.html">🏆 State Rankings</a>
+  <a href="faq.html">❓ FAQ</a>
+  <a href="contact.html">📬 Contact</a>
+</nav>
 <div class="container">
-
 <section class="hero">
-
-<div class="badge">
-🪳 ABOUT THE MOVEMENT
-</div>
-
-<h1>Who Are We?</h1>
-
-<p>
-Cockroach Janata Party (CJP) is not a traditional political party.
-It is a citizen-powered satirical movement created to expose problems,
-compare states, encourage accountability and make governance discussions
-more engaging for ordinary people.
-</p>
-
+  <div class="badge">🪳 Our Story</div>
+  <h1>About the Cockroach Janata Party</h1>
+  <p>A citizen-led accountability platform using data, transparency and public participation to track how Indian states actually perform — not how they claim to perform.</p>
 </section>
 
-<div class="grid">
-
-<div class="card">
-<h3>🎯 Our Mission</h3>
-<p>
-To make public data easy to understand.
-Citizens deserve to know which states perform better,
-which governments deliver results and where improvement is needed.
-</p>
+<h2>What Is the Cockroach Janata Party?</h2>
+<p>The Cockroach Janata Party (CJP) is a satirical civic engagement platform created by ordinary Indian citizens who are tired of governance by slogan, data manipulation and five-year election cycles that produce no accountability between votes.</p>
+<p>We are not a registered political party. We do not contest elections. We do not accept donations or hold political affiliations. CJP is a public interest project designed to make governance data more accessible, comparable and honest for every Indian citizen regardless of state, language or political affiliation.</p>
+<p>The name is intentional. Cockroaches outlived the dinosaurs. They survive everything — floods, droughts, nuclear scenarios, bad governments and broken promises. In the same spirit, Indian citizens have survived 75-plus years of political experiments, failed promises and recycled leaders. We keep going. We keep demanding better. That resilience is what CJP represents.</p>
+<div class="highlight">
+  <p>"We don't promise paradise. We promise data. Uncomfortable, verifiable, publicly sourced data about how every Indian state is performing on things that actually matter to real people."</p>
 </div>
 
-<div class="card">
-<h3>📊 Data Over Drama</h3>
-<p>
-Most politics is driven by speeches and emotions.
-CJP believes decisions should be based on measurable outcomes,
-rankings and transparent public information.
-</p>
+<h2>Why We Built This Platform</h2>
+<p>India is the world's largest democracy with over 1.4 billion citizens spread across 28 states and 8 union territories. Every state has its own government, its own budget priorities and its own track record on delivering public services. Yet most citizens have almost no easy way to compare how their state is performing relative to others on education, healthcare, infrastructure, water access, employment or corruption.</p>
+<p>Official government data exists — published by the National Crime Records Bureau (NCRB), the Comptroller and Auditor General (CAG), the National Sample Survey Office (NSSO), the National Family Health Survey (NFHS), the World Bank India programme and dozens of other credible institutions. But this data is buried in PDF reports, dense statistical tables and ministry websites that most citizens will never visit.</p>
+<p>CJP was built to change that. We pull from these official sources, simplify the numbers and present them in ways that any citizen can understand, share and discuss. If Tamil Nadu is outperforming Bihar on school attendance, citizens in both states deserve to know — and to ask their governments why.</p>
+
+<h2>Our Core Principles</h2>
+<div class="grid2">
+  <div class="value-card">
+    <h3>📊 Data First, Always</h3>
+    <p>Every claim on CJP is backed by publicly available official data. We cite our sources clearly and link to original reports. If a number cannot be independently verified, we do not publish it. No opinions dressed up as statistics.</p>
+  </div>
+  <div class="value-card">
+    <h3>⚖️ Zero Political Bias</h3>
+    <p>CJP does not support any political party — not BJP, Congress, AAP, TMC, DMK or any other. We rank states purely by performance metrics. A well-governed state run by any party earns a strong ranking. Failure earns criticism regardless of which party is responsible.</p>
+  </div>
+  <div class="value-card">
+    <h3>🔓 Radical Transparency</h3>
+    <p>Our methodology is public. Our source data is linked. Our calculations are explained in plain language. Citizens should not simply trust our rankings — they should be able to verify, challenge and improve them.</p>
+  </div>
+  <div class="value-card">
+    <h3>🗣️ Genuine Citizen Voice</h3>
+    <p>Official data tells part of the story. Lived experience tells the rest. CJP lets citizens rate their own states based on what they personally experience in schools, hospitals, government offices and on public roads.</p>
+  </div>
 </div>
 
-<div class="card">
-<h3>🏆 Healthy Competition</h3>
-<p>
-When states compete for better education,
-healthcare, infrastructure and jobs,
-citizens become the real winners.
-</p>
+<h2>What We Monitor and Why</h2>
+<p>CJP tracks Indian state performance across five major categories that directly affect the daily quality of life of ordinary citizens:</p>
+
+<h3>Education Quality and Access</h3>
+<p>We track school enrollment rates, student-to-teacher ratios, dropout rates at primary and secondary levels, literacy outcomes by district, infrastructure quality including availability of clean toilets, drinking water and electricity in government schools, and performance in national learning assessments. Data sources include the Annual Status of Education Report (ASER), UDISE+ national database, and Ministry of Education annual reports. Education is the single most powerful predictor of a state's long-term economic development, yet millions of Indian children still attend schools without basic facilities.</p>
+
+<h3>Healthcare System Performance</h3>
+<p>We monitor hospital bed availability per 1,000 population, doctor-to-patient ratios in public facilities, maternal mortality rates, infant mortality rates, full immunization coverage for children under five, public health budget as a percentage of state GDP, and availability of essential medicines in government-run primary health centres. Sources include the National Family Health Survey (NFHS-5), National Health Mission quarterly reports and World Health Organization India programme data. India spends less than 2% of GDP on public healthcare — far below international standards — making state-level efficiency critically important.</p>
+
+<h3>Roads, Infrastructure and Connectivity</h3>
+<p>Road condition ratings, national and state highway density, rural road access under the Pradhan Mantri Gram Sadak Yojana, household electrification completion rates, broadband internet penetration and public transport availability in urban and semi-urban areas. Sources include Ministry of Road Transport and Highways, Rural Electrification Corporation, and Telecom Regulatory Authority of India quarterly reports. Infrastructure quality has a direct and measurable impact on agricultural productivity, health access and business investment in every state.</p>
+
+<h3>Water Access and Sanitation</h3>
+<p>Coverage of piped clean drinking water under the Jal Jeevan Mission, open defecation free certification and real-world verification, sewage treatment capacity as a percentage of sewage generated, river water quality index from the Central Pollution Control Board, and urban water supply consistency including hours per day of supply. Sources include the Jal Shakti Ministry dashboard, CPCB annual reports and Census water and sanitation data. Access to clean water remains one of the most unequal outcomes across Indian states.</p>
+
+<h3>Employment and Economic Opportunity</h3>
+<p>State unemployment rates from CMIE monthly surveys, formal employment generation trends, ease of doing business rankings from the Department for Promotion of Industry and Internal Trade (DPIIT), per capita net state domestic product growth, poverty headcount ratios and effective implementation rates of central employment schemes like MGNREGS. Sources include CMIE, Ministry of Labour and Employment, Reserve Bank of India state finance studies and World Bank India poverty assessments.</p>
+
+<div class="stats-grid">
+  <div class="stat-box"><div class="stat-num">28</div><div class="stat-label">States Tracked</div></div>
+  <div class="stat-box"><div class="stat-num">5</div><div class="stat-label">Key Categories</div></div>
+  <div class="stat-box"><div class="stat-num">15+</div><div class="stat-label">Official Data Sources</div></div>
+  <div class="stat-box"><div class="stat-num">75+</div><div class="stat-label">Years of Broken Promises</div></div>
 </div>
 
-<div class="card">
-<h3>🪳 Why A Cockroach?</h3>
-<p>
-Because cockroaches survive everything.
-Governments change.
-Parties change.
-Promises change.
-Problems remain.
-The cockroach reminds us that citizens outlast politicians.
-</p>
-</div>
+<h2>How CJP Differs From Other Platforms</h2>
+<p>Many organisations publish Indian governance rankings — think tanks, international agencies, government departments and NGOs all produce reports. CJP differs in three important ways.</p>
+<p>First, CJP is citizen-built with no institutional agenda, no funder to satisfy and no political master to serve. Our only obligation is to accuracy and genuine public interest.</p>
+<p>Second, we combine top-down official data with bottom-up citizen ratings. Government statistics capture what administrations report. Citizen ratings capture what governments actually deliver on the ground. Both perspectives together create a more complete and honest picture of state performance.</p>
+<p>Third, we are designed for shareability and real conversation. A governance report buried in a 400-page PDF document helps almost no one. CJP presents information in ways designed to spread through social media, spark genuine debate and make citizens more informed and active participants in India's democratic process.</p>
 
-</div>
+<h2>What CJP Is Not</h2>
+<p>CJP is not a news organization. We do not report breaking news or provide political commentary on current events. We are not affiliated with any media house, political party, NGO, government body or foreign organization. We are not a substitute for professional legal, medical or financial advice.</p>
+<p>The satirical elements of CJP — the cockroach mascot, the direct tone, the blunt language about political failure — are deliberate. Dry governance reports put people to sleep. We believe citizens engage more deeply when information is presented with honesty and a sense of humour about a situation that is genuinely extraordinary: a 1.4 billion person democracy where most people cannot easily find out whether their elected government is actually doing its job.</p>
 
-<div class="quote">
-
-"India does not need more political slogans.
-India needs transparency, accountability and informed citizens."
-
+<h2>Participate and Contribute</h2>
+<p>CJP grows through citizen participation. You can contribute by rating your own state on our interactive leaderboard, sharing rankings with friends and family, suggesting corrections to our data, submitting first-hand reports about public services in your area, and helping us reach citizens in regional languages beyond English.</p>
+<p>India's problems are large. But so are India's citizens — in number, in resilience and in their demand for basic dignity. The cockroach outlasted the dinosaurs. We will outlast the corrupt politicians too.</p>
 </div>
 
 <div class="footer">
-
-<h3>COCKROACH JANATA PARTY</h3>
-
-<p>
-India's Most Honest Political Party
-(Also The Only Insect-Based One)
-</p>
-
+  <p>🪳 Cockroach Janata Party — India's Most Honest Civic Platform</p>
+  <p style="margin-top:12px;">
+    <a href="index.html">Home</a> <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a> <a href="contact.html">Contact</a>
+    <a href="disclaimer.html">Disclaimer</a>
+  </p>
 </div>
-
-</div>
-
 </body>
-  </html>
+</html>
