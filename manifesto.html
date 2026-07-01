@@ -3,358 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>CJP Manifesto | Cockroach Janata Party</title>
-
-<link rel="icon" type="image/png" href="favicon.png">
-
+<title>CJP Manifesto | Cockroach Janata Party – Full Policy Platform for India</title>
+<meta name="description" content="The complete Cockroach Janata Party manifesto — detailed policy positions on education, healthcare, infrastructure, water access, employment, corruption and governance reform in India.">
+<link rel="icon" href="favicon.png">
 <style>
-:root{
---black:#080808;
---dark:#111;
---green:#2a6428;
---gold:#c9a227;
---text:#ddd;
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-background:
-radial-gradient(circle at center,
-rgba(0,80,0,.35) 0%,
-rgba(0,40,0,.18) 30%,
-#080808 70%);
-color:var(--text);
-font-family:Arial,sans-serif;
-}
-
-.nav{
-position:sticky;
-top:0;
-background:rgba(8,8,8,.95);
-padding:18px 25px;
-border-bottom:1px solid rgba(255,255,255,.08);
-z-index:999;
-}
-
-.nav a{
-color:var(--gold);
-text-decoration:none;
-margin-right:20px;
-font-size:.9rem;
-}
-
-.container{
-max-width:1100px;
-margin:auto;
-padding:40px 20px;
-}
-
-.hero{
-padding:100px 0;
-text-align:center;
-}
-
-.badge{
-display:inline-block;
-padding:10px 18px;
-border:1px solid var(--gold);
-background:#183816;
-color:var(--gold);
-letter-spacing:2px;
-font-size:.8rem;
-}
-
-.hero h1{
-font-size:4rem;
-color:var(--gold);
-margin-top:25px;
-line-height:1.1;
-}
-
-.hero p{
-max-width:850px;
-margin:30px auto;
-line-height:1.9;
-font-size:1.1rem;
-}
-
-.section-title{
-color:var(--gold);
-margin-bottom:30px;
-font-size:2rem;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-.card{
-background:#111;
-border:1px solid var(--gold);
-padding:25px;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card h3{
-color:var(--gold);
-margin-bottom:15px;
-}
-
-.card p{
-line-height:1.8;
-}
-
-.promise{
-margin-top:70px;
-background:#111;
-border:2px solid var(--gold);
-padding:40px;
-}
-
-.promise h2{
-color:var(--gold);
-margin-bottom:20px;
-}
-
-.promise p{
-line-height:2;
-}
-
-.quote{
-margin-top:20px;
-font-size:1.2rem;
-color:var(--gold);
-}
-
-.footer{
-margin-top:100px;
-padding:50px 20px;
-text-align:center;
-border-top:1px solid rgba(255,255,255,.08);
-}
-
-.footer h3{
-color:var(--gold);
-margin-bottom:15px;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:2.6rem;
-}
-
-.section-title{
-font-size:1.6rem;
-}
-
-}
+:root{--black:#080808;--green:#234628;--gold:#c9a227;--goldf:#e8b82a;--text:#ddddcc;--muted:#888;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:radial-gradient(circle at center,rgba(0,80,0,.35) 0%,rgba(0,40,0,.18) 30%,#080808 70%);color:var(--text);font-family:Arial,sans-serif;line-height:1.8;}
+.nav{position:sticky;top:0;background:rgba(8,8,8,.96);padding:16px 25px;border-bottom:1px solid rgba(201,162,39,.2);z-index:999;display:flex;gap:20px;flex-wrap:wrap;}
+.nav a{color:var(--gold);text-decoration:none;font-size:.85rem;letter-spacing:1px;}
+.container{max-width:1000px;margin:auto;padding:40px 20px;}
+.hero{text-align:center;padding:80px 0 50px;}
+.badge{display:inline-block;padding:8px 20px;background:#183816;border:1px solid var(--gold);color:var(--gold);letter-spacing:3px;font-size:.7rem;text-transform:uppercase;}
+.hero h1{font-size:3rem;margin-top:20px;color:var(--gold);line-height:1.15;}
+.hero p{max-width:800px;margin:25px auto;font-size:1.05rem;line-height:1.9;}
+h2{color:var(--gold);font-size:1.9rem;margin:60px 0 20px;border-bottom:2px solid rgba(201,162,39,.4);padding-bottom:12px;}
+h3{color:var(--goldf);font-size:1.15rem;margin:28px 0 10px;}
+p{margin-bottom:16px;line-height:1.9;}
+ul{padding-left:22px;margin:12px 0 20px;}
+ul li{margin-bottom:10px;line-height:1.8;}
+.problem-box{background:#1a0a0a;border:1px solid rgba(220,80,60,.3);border-left:4px solid #dc503c;padding:20px 25px;margin:20px 0;}
+.problem-box h4{color:#e8705a;margin-bottom:10px;font-size:1rem;}
+.solution-box{background:#0a1a0a;border:1px solid rgba(80,180,80,.3);border-left:4px solid #50b450;padding:20px 25px;margin:20px 0;}
+.solution-box h4{color:#70c870;margin-bottom:10px;font-size:1rem;}
+.stat-line{background:#111;border:1px solid rgba(201,162,39,.25);padding:15px 20px;margin:12px 0;font-size:.95rem;}
+.stat-line strong{color:var(--gold);}
+.promise{background:#0d1a0d;border:2px solid var(--gold);padding:35px;margin:50px 0;}
+.promise h2{border:none;margin-top:0;}
+.quote{font-size:1.2rem;color:var(--gold);font-style:italic;margin-top:15px;line-height:1.7;}
+.footer{margin-top:80px;padding:40px 20px;text-align:center;border-top:1px solid rgba(255,255,255,.08);color:var(--muted);font-size:.85rem;}
+.footer a{color:var(--gold);text-decoration:none;margin:0 10px;}
 </style>
-
 </head>
-
 <body>
-
-<div class="nav">
-<a href="index.html">🏠 Home</a>
-<a href="state-rankings.html">🏆 Rankings</a>
-<a href="leaderboard.html">📊 Leaderboard</a>
-</div>
-
-<section class="hero">
+<nav class="nav">
+  <a href="index.html">🪳 Home</a>
+  <a href="about.html">ℹ️ About</a>
+  <a href="state-rankings.html">🏆 Rankings</a>
+  <a href="faq.html">❓ FAQ</a>
+  <a href="contact.html">📬 Contact</a>
+</nav>
 <div class="container">
-
-<div class="badge">
-🪳 PEOPLE'S MANIFESTO 2025
-</div>
-
-<h1>
-COCKROACH JANATA PARTY
-MANIFESTO
-</h1>
-
-<p>
-For decades citizens were asked to trust politicians.
-We believe citizens should trust data instead.
-The Cockroach Janata Party exists to expose problems,
-compare states, track accountability and encourage evidence-based governance.
-</p>
-
-</div>
+<section class="hero">
+  <div class="badge">🪳 People's Manifesto</div>
+  <h1>The Cockroach Janata Party Manifesto</h1>
+  <p>For 75 years citizens were asked to trust politicians. CJP believes citizens should trust data instead. This manifesto is built on publicly verifiable facts, international best practices and the uncomfortable honesty that Indian governance has been avoiding for decades.</p>
 </section>
 
-<div class="container">
+<h2>Why India Needs a Different Conversation</h2>
+<p>India in 2025 is simultaneously one of the world's fastest-growing major economies and a country where hundreds of millions of citizens lack access to clean water, quality schooling, reliable healthcare and meaningful employment. These two realities exist at the same time because economic growth, when it is not matched by governance quality, does not automatically reach the people who need it most.</p>
+<p>The standard political response to India's problems follows a predictable pattern: announce a scheme with a catchy name, release optimistic progress statistics, declare success before outcomes can be measured, and repeat at the next election cycle. CJP exists to break this cycle — not with our own promises, but with data that makes it harder for any government to claim success it has not earned.</p>
+<p>This manifesto does not promise to fix India's problems if you vote for us. We are not on the ballot. Instead, it presents an honest diagnosis of where India fails its citizens, what international evidence suggests works, and what citizens should demand from whichever government they elect.</p>
 
-<h2 class="section-title">
-🏛 Governance
-</h2>
+<h2>🎓 Education: The Foundation India Is Not Building</h2>
 
-<div class="grid">
-
-<div class="card">
-<h3>Transparent Spending</h3>
-<p>
-Every public project should have a public dashboard showing budgets,
-deadlines and progress.
-</p>
+<div class="problem-box">
+  <h4>The Problem</h4>
+  <p>According to ASER 2023 data, only 43% of Class 8 students in rural India can read a simple Class 2 text fluently in their regional language. Over 26% of government school students in several states drop out before completing secondary education. The UDISE+ 2022-23 report found that over 14% of government school buildings nationally still lack access to functional toilets for girls — a direct driver of female dropout rates after puberty.</p>
 </div>
 
-<div class="card">
-<h3>Citizen Accountability</h3>
-<p>
-Citizens should rate public services continuously,
-not just politicians every five years.
-</p>
+<div class="stat-line"><strong>1 in 3</strong> rural Indian children completing Class 5 cannot solve a basic subtraction problem. (ASER 2023)</div>
+<div class="stat-line"><strong>₹3.1 lakh crore</strong> is the annual economic cost India pays due to low learning outcomes, estimated by World Bank India education economists.</div>
+
+<h3>What Actually Works — Evidence From Other Countries</h3>
+<p>Finland transformed its education system by focusing obsessively on teacher quality rather than standardised testing. Teachers in Finland are drawn from the top third of university graduates and receive more professional training than doctors. The result: Finland consistently ranks among the world's top five nations in learning outcomes with zero private tutoring market because schools actually work.</p>
+<p>Vietnam, a country with per capita income lower than India's until recently, now outperforms most middle-income countries in international learning assessments — by investing heavily in teacher training, providing free textbooks through school grade 5, and making school principal accountability a national priority.</p>
+
+<div class="solution-box">
+  <h4>What CJP Demands From Every State Government</h4>
+  <ul>
+    <li>Publish annual school-level report cards showing attendance, learning outcomes and infrastructure status — publicly accessible by any citizen</li>
+    <li>Achieve functional toilet access in 100% of government schools within 24 months — monitored by independent third-party verification, not self-reporting</li>
+    <li>Reduce student-to-teacher ratio to below 30:1 in all primary schools — the international standard for effective classroom learning</li>
+    <li>Implement regular independent learning assessments with results published by school and district — not aggregated into state-level averages that hide local failures</li>
+    <li>Provide teacher salary parity with comparable government service roles to attract and retain quality educators in rural postings</li>
+  </ul>
 </div>
 
-<div class="card">
-<h3>Performance Rankings</h3>
-<p>
-States should compete using measurable outcomes,
-not speeches and slogans.
-</p>
+<h2>🏥 Healthcare: India's Most Preventable Crisis</h2>
+
+<div class="problem-box">
+  <h4>The Problem</h4>
+  <p>India spends approximately 1.8% of GDP on public healthcare — among the lowest ratios for any major economy globally, and less than half the 5% World Health Organization recommendation for developing nations. The result is a system where the poorest Indians face catastrophic out-of-pocket medical expenses. NFHS-5 data shows that over 57% of deliveries in rural Rajasthan, UP and Bihar still occur without adequate skilled attendance. In 2023, India recorded the world's highest number of tuberculosis cases — a disease that is entirely preventable and curable with consistent treatment.</p>
 </div>
 
+<div class="stat-line"><strong>63 million Indians</strong> are pushed below the poverty line every year by out-of-pocket healthcare expenses. (Ministry of Health and Family Welfare data)</div>
+<div class="stat-line"><strong>0.7 doctors</strong> per 1,000 population in rural India, against a WHO recommendation of 1 per 1,000. Urban India has 3.8 per 1,000.</div>
+
+<h3>What the Evidence Recommends</h3>
+<p>Thailand achieved universal healthcare coverage for its entire population of 70 million people at a cost of under 4% of GDP by designing a system around primary care gatekeeping, mobile health units for rural areas and mandatory generic medicine usage in public facilities. India's Jan Aushadhi scheme follows a similar logic but covers fewer than 8% of essential medicine needs nationally as of 2024.</p>
+<p>Rwanda — one of the poorest nations in Africa — achieved over 90% health insurance coverage through community-based insurance schemes and rigorous health worker training at village level. India's PM-JAY Ayushman Bharat scheme is the right architecture but suffers from insufficient primary care investment, creating a situation where the scheme pays for expensive hospital treatment that basic prevention would have avoided.</p>
+
+<div class="solution-box">
+  <h4>What CJP Demands From Every State Government</h4>
+  <ul>
+    <li>Increase state public health expenditure to minimum 8% of state budget — with zero tolerance for unspent health budget allocations</li>
+    <li>Staff every Primary Health Centre with at minimum one MBBS doctor and one trained nurse — publish vacancies and vacancies-filled data monthly</li>
+    <li>Achieve 100% coverage of institutional deliveries attended by skilled health workers in all districts by 2026</li>
+    <li>Ensure all Jan Aushadhi stores are stocked with the full list of 1,800 essential medicines — measured by independent monthly audits</li>
+    <li>Eliminate tuberculosis as a public health crisis through mandatory contact tracing, directly observed treatment and nutrition support for all TB patients</li>
+  </ul>
 </div>
 
-<br><br>
+<h2>🚰 Water and Sanitation: The Crisis Nobody Talks About</h2>
 
-<h2 class="section-title">
-🏥 Healthcare
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Hospital Transparency</h3>
-<p>
-Track hospital quality, doctor availability and emergency response times.
-</p>
+<div class="problem-box">
+  <h4>The Problem</h4>
+  <p>Despite the Jal Jeevan Mission claiming over 75% household piped water connections as of 2024, independent field surveys by civil society organisations find that functional daily water supply is available in only 30-40% of connected rural households. The gap between infrastructure connection and functional water access is enormous — and politically inconvenient to acknowledge. The Central Pollution Control Board classifies over 350 river stretches across India as severely polluted, affecting drinking water for over 200 million people who depend on river sources.</p>
 </div>
 
-<div class="card">
-<h3>Medicine Access</h3>
-<p>
-Essential medicines should be available and monitored publicly.
-</p>
+<div class="stat-line"><strong>200,000+ children</strong> under five die annually in India from diarrhoeal diseases caused primarily by contaminated water and inadequate sanitation. (WHO India data)</div>
+
+<div class="solution-box">
+  <h4>What CJP Demands</h4>
+  <ul>
+    <li>Shift Jal Jeevan Mission measurement from connections installed to functional hours of clean water supply per day — audited independently</li>
+    <li>Publish real-time water quality testing results for all municipal water supplies on publicly accessible platforms</li>
+    <li>Mandatory third-party ODF verification before any village or district is certified open defecation free</li>
+    <li>Treat industrial and municipal wastewater to legal standards before discharge — enforce penalties that are large enough to change behaviour</li>
+  </ul>
 </div>
 
-<div class="card">
-<h3>Healthcare Rankings</h3>
-<p>
-Compare states using real health outcomes.
-</p>
+<h2>💼 Employment: The Problem Every Politician Avoids Measuring Honestly</h2>
+
+<div class="problem-box">
+  <h4>The Problem</h4>
+  <p>India needs to create approximately 8-10 million new jobs annually simply to absorb young people entering the labour force. CMIE data consistently shows unemployment rates significantly higher than official government estimates — particularly affecting urban youth aged 20-29, where unemployment exceeds 20% in several states. The Periodic Labour Force Survey 2023 found that over 45% of Indian workers are in informal employment with no social security, no minimum wage protection and no job security.</p>
 </div>
 
+<div class="stat-line"><strong>45%</strong> of Indian engineering graduates are not employable in their field of study, according to NASSCOM industry assessments — pointing to a quality gap in technical education.</div>
+
+<div class="solution-box">
+  <h4>What CJP Demands</h4>
+  <ul>
+    <li>Publish monthly district-level employment data using a consistent methodology — not selectively release only favourable indicators</li>
+    <li>Reform ease of doing business at state level with a focus on time and cost to start and close small businesses — not just large investor onboarding</li>
+    <li>Implement skill development programmes with outcome-based funding tied to actual employment at living wages — not certificate completion</li>
+    <li>Enforce minimum wage laws with meaningful penalties — and increase minimum wages annually in line with inflation data</li>
+  </ul>
 </div>
 
-<br><br>
-
-<h2 class="section-title">
-🎓 Education
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>School Scorecards</h3>
-<p>
-Attendance, infrastructure and results should be transparent.
-</p>
-</div>
-
-<div class="card">
-<h3>Teacher Accountability</h3>
-<p>
-Every child deserves quality education and measurable standards.
-</p>
-</div>
-
-<div class="card">
-<h3>Future Skills</h3>
-<p>
-Focus on technology, science and entrepreneurship.
-</p>
-</div>
-
-</div>
-
-<br><br>
-
-<h2 class="section-title">
-💼 Economy
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Jobs First</h3>
-<p>
-Track employment generation across states.
-</p>
-</div>
-
-<div class="card">
-<h3>Support Innovation</h3>
-<p>
-Encourage startups and small businesses.
-</p>
-</div>
-
-<div class="card">
-<h3>Data Driven Policy</h3>
-<p>
-Decisions should be based on evidence, not emotion.
-</p>
-</div>
-
-</div>
+<h2>🏛️ Governance: The Root Problem</h2>
+<p>Education quality, healthcare access, water availability and employment opportunity are all downstream of governance quality. A state with transparent, accountable, efficient governance delivers better outcomes across every measure — regardless of its natural resources or starting economic conditions. The evidence for this is overwhelming and consistent across decades of international development research.</p>
+<p>CJP tracks governance quality through proxy indicators: budget utilisation rates, audit compliance, time to deliver government certificates and services, corruption perception in public dealings (via citizen surveys), and judicial pendency at district courts — because justice delayed is a governance failure as much as a legal one.</p>
 
 <div class="promise">
-
-<h2>
-🔥 The Cockroach Promise
-</h2>
-
-<p>
-No impossible promises.
-No magic solutions.
-No fake statistics.
-</p>
-
-<p>
-We promise transparency.
-We promise accountability.
-We promise uncomfortable facts.
-</p>
-
-<div class="quote">
-"If a state performs better, citizens deserve to know.
-If a government fails, citizens deserve to know."
+  <h2>🔥 The CJP Promise to India</h2>
+  <p>We make no impossible promises. We offer no magic solutions. We will not tell you your state is performing well when data says otherwise, and we will not pretend governance problems are easy to fix.</p>
+  <p>We promise transparency. We promise accountability. We promise uncomfortable facts presented clearly to people who deserve to know them.</p>
+  <p>India's citizens are not the problem. India's governments — across all parties, across all states, across many decades — have frequently failed to serve the people who elected them with the seriousness and honesty those people deserve.</p>
+  <div class="quote">"If a state performs better, every Indian citizen deserves to know. If a government fails, every Indian citizen deserves to know that too."</div>
 </div>
 
-</div>
+<p>The cockroach outlasted the dinosaurs. Indian citizens will outlast every corrupt politician, every broken promise and every government that mistakes a press release for a policy outcome.</p>
+<p>Use our platform. Rate your state. Share the data. Demand better.</p>
 
 </div>
-
 <div class="footer">
-<h3>🪳 Cockroach Janata Party</h3>
-<p>
-India's Most Honest Political Party (Also The Only Insect-Based One)
-</p>
+  <p>🪳 Cockroach Janata Party — India's Most Honest Civic Platform</p>
+  <p style="margin-top:12px;">
+    <a href="index.html">Home</a> <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a> <a href="privacy.html">Privacy</a>
+    <a href="contact.html">Contact</a>
+  </p>
 </div>
-
 </body>
 </html>
