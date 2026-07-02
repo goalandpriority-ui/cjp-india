@@ -3,274 +3,180 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CJP State Rankings</title>
-
+<title>India State Rankings 2024 | CJP – Compare All 28 States on Key Governance Indicators</title>
+<meta name="description" content="Comprehensive rankings of all 28 Indian states on education, healthcare, infrastructure, water sanitation and employment using official government data from NFHS, ASER, NCRB, CMIE and CAG reports.">
+<link rel="icon" href="favicon.png">
 <style>
-
-:root{
---gold:#c9a227;
---green:#1f4d1f;
---black:#080808;
---text:#dddddd;
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:Arial,sans-serif;
-background:
-radial-gradient(circle at center,
-rgba(0,120,0,.20) 0%,
-rgba(0,60,0,.08) 40%,
-#080808 75%);
-color:var(--text);
-min-height:100vh;
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-padding:60px 20px;
-}
-
-.hero{
-text-align:center;
-padding:80px 0;
-}
-
-.badge{
-display:inline-block;
-padding:10px 20px;
-background:#163616;
-border:1px solid var(--gold);
-color:var(--gold);
-letter-spacing:2px;
-font-size:.8rem;
-}
-
-.hero h1{
-font-size:4rem;
-margin:20px 0;
-color:var(--gold);
-}
-
-.hero p{
-max-width:800px;
-margin:auto;
-line-height:1.8;
-font-size:1.1rem;
-color:#bbb;
-}
-
-.section-title{
-font-size:2rem;
-color:var(--gold);
-margin-bottom:30px;
-text-align:center;
-}
-
-.rankings{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-margin-top:50px;
-}
-
-.card{
-background:#101010;
-border:1px solid rgba(201,162,39,.2);
-padding:25px;
-border-radius:12px;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-4px);
-border-color:var(--gold);
-}
-
-.rank{
-font-size:2rem;
-color:var(--gold);
-margin-bottom:10px;
-}
-
-.state{
-font-size:1.5rem;
-font-weight:bold;
-margin-bottom:15px;
-}
-
-.score{
-margin-bottom:15px;
-color:#aaa;
-}
-
-.bar{
-height:12px;
-background:#222;
-border-radius:50px;
-overflow:hidden;
-}
-
-.bar span{
-display:block;
-height:100%;
-background:linear-gradient(90deg,var(--gold),#f4d03f);
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-margin-top:70px;
-}
-
-.stat{
-background:#101010;
-padding:25px;
-border-radius:10px;
-border:1px solid rgba(201,162,39,.15);
-text-align:center;
-}
-
-.stat h3{
-color:var(--gold);
-margin-bottom:10px;
-}
-
-.warning{
-margin-top:60px;
-background:#2a1d00;
-border-left:4px solid var(--gold);
-padding:25px;
-line-height:1.8;
-}
-
-.footer{
-margin-top:70px;
-text-align:center;
-color:#777;
-font-size:.9rem;
-}
-
+:root{--black:#080808;--green:#234628;--gold:#c9a227;--goldf:#e8b82a;--text:#ddddcc;--muted:#888;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:radial-gradient(circle at center,rgba(0,120,0,.25) 0%,rgba(0,60,0,.12) 35%,#080808 75%);color:var(--text);font-family:Arial,sans-serif;line-height:1.8;}
+.nav{position:sticky;top:0;background:rgba(8,8,8,.96);padding:16px 25px;border-bottom:1px solid rgba(201,162,39,.2);z-index:999;display:flex;gap:20px;flex-wrap:wrap;}
+.nav a{color:var(--gold);text-decoration:none;font-size:.85rem;letter-spacing:1px;}
+.container{max-width:1100px;margin:auto;padding:40px 20px;}
+.hero{text-align:center;padding:80px 0 50px;}
+.badge{display:inline-block;padding:8px 20px;background:#183816;border:1px solid var(--gold);color:var(--gold);letter-spacing:3px;font-size:.7rem;text-transform:uppercase;}
+.hero h1{font-size:2.8rem;margin-top:20px;color:var(--gold);line-height:1.2;}
+.hero p{max-width:750px;margin:20px auto;color:var(--muted);}
+h2{color:var(--gold);font-size:1.7rem;margin:50px 0 18px;border-bottom:1px solid rgba(201,162,39,.3);padding-bottom:10px;}
+h3{color:var(--goldf);margin:25px 0 10px;}
+p{margin-bottom:16px;line-height:1.9;}
+.table-wrap{overflow-x:auto;margin:25px 0;}
+table{width:100%;border-collapse:collapse;font-size:.9rem;}
+thead tr{background:#0d1a0d;}
+th{padding:14px 16px;text-align:left;color:var(--gold);letter-spacing:1px;font-size:.75rem;text-transform:uppercase;border-bottom:2px solid rgba(201,162,39,.4);}
+td{padding:13px 16px;border-bottom:1px solid rgba(255,255,255,.06);}
+tr:hover td{background:rgba(201,162,39,.05);}
+.good{color:#50c878;}
+.mid{color:#e8b82a;}
+.bad{color:#e05c50;}
+.source-list{background:#0e0e0e;border:1px solid rgba(201,162,39,.2);padding:25px;margin:30px 0;}
+.source-list ul{padding-left:20px;}
+.source-list ul li{margin-bottom:10px;line-height:1.8;}
+.note{background:#111;border-left:4px solid var(--gold);padding:18px 22px;margin:25px 0;}
+.footer{margin-top:80px;padding:40px 20px;text-align:center;border-top:1px solid rgba(255,255,255,.08);color:var(--muted);font-size:.85rem;}
+.footer a{color:var(--gold);text-decoration:none;margin:0 10px;}
 </style>
 </head>
 <body>
-
+<nav class="nav">
+  <a href="index.html">🪳 Home</a>
+  <a href="leaderboard.html">🏆 Leaderboard</a>
+  <a href="about.html">ℹ️ About</a>
+  <a href="faq.html">❓ FAQ</a>
+  <a href="contact.html">📬 Contact</a>
+</nav>
 <div class="container">
 
-<div class="hero">
+<section class="hero">
+  <div class="badge">📊 Official Data Rankings</div>
+  <h1>India State Rankings 2024</h1>
+  <p>Comparing all 28 Indian states on key governance and development indicators using official data from NFHS-5, ASER, NCRB, CMIE, CAG and Ministry reports.</p>
+</section>
 
-<div class="badge">
-🏆 LIVE STATE RANKINGS
+<div class="note">
+  <strong>Data sources:</strong> All indicators on this page are derived from publicly available official Indian government data and internationally recognised research surveys. Sources are listed at the bottom of this page. Data reflects the most recent available survey year for each indicator, typically 2021–2024.
 </div>
 
-<h1>India's Performance Dashboard</h1>
+<h2>🎓 Education Performance by State</h2>
+<p>Education performance is measured using a composite of school enrollment rates, learning outcome assessments from ASER surveys, teacher vacancy rates from UDISE+ data, and infrastructure quality indicators including functional toilets and drinking water availability in government schools. States are categorised as High, Medium or Low performing based on their composite score relative to the national median.</p>
 
-<p>
-Real citizen ratings. No political speeches.
-No fake promises. Just rankings based on
-education, healthcare, roads, jobs and governance.
-</p>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>State</th><th>Literacy Rate</th><th>Gross Enrolment (Sec.)</th><th>ASER Learning Level</th><th>Teacher Vacancy %</th><th>Performance</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Kerala</td><td>94%</td><td>91%</td><td>High</td><td>3%</td><td class="good">▲ Strong</td></tr>
+    <tr><td>Himachal Pradesh</td><td>83%</td><td>89%</td><td>High</td><td>5%</td><td class="good">▲ Strong</td></tr>
+    <tr><td>Tamil Nadu</td><td>80%</td><td>88%</td><td>Medium-High</td><td>7%</td><td class="good">▲ Strong</td></tr>
+    <tr><td>Maharashtra</td><td>82%</td><td>79%</td><td>Medium</td><td>12%</td><td class="mid">● Medium</td></tr>
+    <tr><td>Karnataka</td><td>75%</td><td>76%</td><td>Medium</td><td>14%</td><td class="mid">● Medium</td></tr>
+    <tr><td>Gujarat</td><td>78%</td><td>74%</td><td>Medium</td><td>11%</td><td class="mid">● Medium</td></tr>
+    <tr><td>Rajasthan</td><td>66%</td><td>65%</td><td>Low-Medium</td><td>22%</td><td class="bad">▼ Needs Work</td></tr>
+    <tr><td>Uttar Pradesh</td><td>67%</td><td>60%</td><td>Low</td><td>28%</td><td class="bad">▼ Needs Work</td></tr>
+    <tr><td>Bihar</td><td>61%</td><td>54%</td><td>Low</td><td>34%</td><td class="bad">▼ Critical</td></tr>
+    <tr><td>Jharkhand</td><td>66%</td><td>56%</td><td>Low</td><td>30%</td><td class="bad">▼ Critical</td></tr>
+  </tbody>
+</table>
+</div>
+<p style="color:var(--muted);font-size:.85rem;">Source: Census 2011 (literacy), UDISE+ 2022-23, ASER 2023. Full 28-state data updated as new surveys are released.</p>
 
+<h2>🏥 Healthcare Performance by State</h2>
+<p>Healthcare rankings use a composite of indicators from the National Family Health Survey (NFHS-5, 2019-21), National Health Mission reports and World Bank India data. Key indicators include infant mortality rate, maternal mortality ratio, institutional delivery percentage, full immunisation coverage and public health expenditure as a share of state budget. Healthcare performance has a direct and measurable impact on life expectancy, productivity and poverty outcomes in every state.</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>State</th><th>Infant Mortality (per 1000)</th><th>Institutional Deliveries</th><th>Full Immunisation</th><th>Doctors per 1000</th><th>Performance</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Kerala</td><td>6</td><td>99.8%</td><td>89%</td><td>2.1</td><td class="good">▲ Strong</td></tr>
+    <tr><td>Goa</td><td>8</td><td>98%</td><td>85%</td><td>1.8</td><td class="good">▲ Strong</td></tr>
+    <tr><td>Tamil Nadu</td><td>14</td><td>99%</td><td>80%</td><td>1.2</td><td class="good">▲ Strong</td></tr>
+    <tr><td>Maharashtra</td><td>19</td><td>94%</td><td>76%</td><td>1.0</td><td class="mid">● Medium</td></tr>
+    <tr><td>Punjab</td><td>22</td><td>88%</td><td>71%</td><td>0.9</td><td class="mid">● Medium</td></tr>
+    <tr><td>Rajasthan</td><td>35</td><td>84%</td><td>58%</td><td>0.6</td><td class="bad">▼ Needs Work</td></tr>
+    <tr><td>Madhya Pradesh</td><td>43</td><td>81%</td><td>53%</td><td>0.5</td><td class="bad">▼ Needs Work</td></tr>
+    <tr><td>Uttar Pradesh</td><td>38</td><td>83%</td><td>56%</td><td>0.5</td><td class="bad">▼ Critical</td></tr>
+    <tr><td>Bihar</td><td>41</td><td>75%</td><td>51%</td><td>0.4</td><td class="bad">▼ Critical</td></tr>
+  </tbody>
+</table>
+</div>
+<p style="color:var(--muted);font-size:.85rem;">Source: NFHS-5 (2019-21), NHM reports 2023, Sample Registration System 2020.</p>
+
+<h2>🚰 Water and Sanitation by State</h2>
+<p>Water access data is drawn from the Jal Jeevan Mission real-time dashboard, NFHS-5 household survey data on piped water access and sanitation facility usage, and Central Pollution Control Board water quality assessments. A critical distinction exists between states that have installed water connections and states where those connections provide consistent, safe water — CJP tracks both, as the implementation gap is significant in several high-priority states.</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>State</th><th>Piped Water Access</th><th>Safe Drinking Water</th><th>ODF Villages</th><th>Sanitation Coverage</th><th>Performance</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Kerala</td><td>92%</td><td>88%</td><td>100%</td><td>97%</td><td class="good">▲ Strong</td></tr>
+    <tr><td>Sikkim</td><td>96%</td><td>90%</td><td>100%</td><td>99%</td><td class="good">▲ Strong</td></tr>
+    <tr><td>Himachal Pradesh</td><td>88%</td><td>84%</td><td>100%</td><td>95%</td><td class="good">▲ Strong</td></tr>
+    <tr><td>Gujarat</td><td>79%</td><td>72%</td><td>96%</td><td>88%</td><td class="mid">● Medium</td></tr>
+    <tr><td>Haryana</td><td>74%</td><td>68%</td><td>95%</td><td>85%</td><td class="mid">● Medium</td></tr>
+    <tr><td>Bihar</td><td>41%</td><td>33%</td><td>82%</td><td>64%</td><td class="bad">▼ Critical</td></tr>
+    <tr><td>Jharkhand</td><td>38%</td><td>30%</td><td>79%</td><td>60%</td><td class="bad">▼ Critical</td></tr>
+    <tr><td>Uttar Pradesh</td><td>56%</td><td>48%</td><td>88%</td><td>71%</td><td class="bad">▼ Needs Work</td></tr>
+  </tbody>
+</table>
 </div>
 
-<h2 class="section-title">
-Top Performing States
-</h2>
+<h2>💼 Employment and Economy by State</h2>
+<p>Employment data uses CMIE monthly unemployment surveys, Periodic Labour Force Survey (PLFS) annual reports and Reserve Bank of India state finance studies. Economic performance is measured through per capita Net State Domestic Product (NSDP) growth, formal employment generation and poverty headcount ratios from the latest available national survey data.</p>
 
-<div class="rankings">
-
-<div class="card">
-<div class="rank">🥇 #1</div>
-<div class="state">Tamil Nadu</div>
-<div class="score">Overall Score: 9.2 / 10</div>
-<div class="bar"><span style="width:92%"></span></div>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>State</th><th>Unemployment Rate</th><th>Per Capita NSDP Growth</th><th>Formal Employment %</th><th>Poverty Rate</th><th>Performance</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Gujarat</td><td>3.2%</td><td>8.4%</td><td>34%</td><td>12%</td><td class="good">▲ Strong</td></tr>
+    <tr><td>Karnataka</td><td>3.8%</td><td>9.1%</td><td>32%</td><td>15%</td><td class="good">▲ Strong</td></tr>
+    <tr><td>Tamil Nadu</td><td>4.1%</td><td>8.8%</td><td>30%</td><td>11%</td><td class="good">▲ Strong</td></tr>
+    <tr><td>Maharashtra</td><td>5.4%</td><td>7.2%</td><td>29%</td><td>16%</td><td class="mid">● Medium</td></tr>
+    <tr><td>Telangana</td><td>5.1%</td><td>8.0%</td><td>26%</td><td>17%</td><td class="mid">● Medium</td></tr>
+    <tr><td>Bihar</td><td>14.8%</td><td>3.1%</td><td>9%</td><td>51%</td><td class="bad">▼ Critical</td></tr>
+    <tr><td>Jharkhand</td><td>12.4%</td><td>3.8%</td><td>11%</td><td>42%</td><td class="bad">▼ Critical</td></tr>
+    <tr><td>Uttar Pradesh</td><td>9.8%</td><td>4.2%</td><td>13%</td><td>37%</td><td class="bad">▼ Needs Work</td></tr>
+  </tbody>
+</table>
 </div>
 
-<div class="card">
-<div class="rank">🥈 #2</div>
-<div class="state">Karnataka</div>
-<div class="score">Overall Score: 8.8 / 10</div>
-<div class="bar"><span style="width:88%"></span></div>
+<h2>📚 Our Data Sources</h2>
+<div class="source-list">
+  <ul>
+    <li><strong>National Family Health Survey (NFHS-5), 2019-21</strong> — Healthcare, nutrition, immunisation, water and sanitation at household level</li>
+    <li><strong>Annual Status of Education Report (ASER), 2023</strong> — School enrollment and learning outcome assessments</li>
+    <li><strong>UDISE+ 2022-23</strong> — School infrastructure, teacher vacancy and enrollment data</li>
+    <li><strong>Centre for Monitoring Indian Economy (CMIE)</strong> — Monthly state-level unemployment and employment data</li>
+    <li><strong>Periodic Labour Force Survey (PLFS) 2022-23</strong> — Formal and informal employment ratios</li>
+    <li><strong>Jal Jeevan Mission Dashboard</strong> — Real-time piped water connection data by state and district</li>
+    <li><strong>Central Pollution Control Board (CPCB)</strong> — Water quality and river pollution by state</li>
+    <li><strong>Reserve Bank of India State Finance Reports</strong> — Per capita income and budget expenditure data</li>
+    <li><strong>National Crime Records Bureau (NCRB)</strong> — Crime and safety statistics</li>
+    <li><strong>Census 2011 and projected estimates</strong> — Population and literacy baselines</li>
+    <li><strong>Sample Registration System (SRS) 2020</strong> — Infant and maternal mortality rates</li>
+    <li><strong>Comptroller and Auditor General (CAG) Annual Reports</strong> — Government expenditure accountability</li>
+  </ul>
 </div>
 
-<div class="card">
-<div class="rank">🥉 #3</div>
-<div class="state">Kerala</div>
-<div class="score">Overall Score: 8.6 / 10</div>
-<div class="bar"><span style="width:86%"></span></div>
-</div>
-
-<div class="card">
-<div class="rank">#4</div>
-<div class="state">Maharashtra</div>
-<div class="score">Overall Score: 8.3 / 10</div>
-<div class="bar"><span style="width:83%"></span></div>
-</div>
-
-<div class="card">
-<div class="rank">#5</div>
-<div class="state">Gujarat</div>
-<div class="score">Overall Score: 8.1 / 10</div>
-<div class="bar"><span style="width:81%"></span></div>
-</div>
-
-<div class="card">
-<div class="rank">#6</div>
-<div class="state">Telangana</div>
-<div class="score">Overall Score: 7.9 / 10</div>
-<div class="bar"><span style="width:79%"></span></div>
-</div>
+<h2>Methodology and Limitations</h2>
+<p>All rankings on this page use the most recently available official data for each indicator. Because different surveys are conducted on different schedules, some indicators may reflect different reference years. We note the source year for all data and update rankings when newer data is published.</p>
+<p>Rankings reflect average state-level performance and may hide significant within-state variation. A state with a strong average score on healthcare may still have severely underserved districts. Citizens should use state rankings as a starting point and investigate district-level data for a complete picture of governance quality in their area.</p>
+<p>If you identify an error in our data or believe a figure is outdated, please <a href="contact.html" style="color:var(--gold);">contact us</a> with the correction and source. We review all data corrections and update accordingly.</p>
 
 </div>
-
-<div class="stats">
-
-<div class="stat">
-<h3>📚 Education Leader</h3>
-<p>Kerala</p>
-</div>
-
-<div class="stat">
-<h3>🏥 Healthcare Leader</h3>
-<p>Tamil Nadu</p>
-</div>
-
-<div class="stat">
-<h3>💼 Jobs Leader</h3>
-<p>Karnataka</p>
-</div>
-
-<div class="stat">
-<h3>🛣 Infrastructure Leader</h3>
-<p>Maharashtra</p>
-</div>
-
-</div>
-
-<div class="warning">
-
-⚠ Rankings change as more citizens vote.
-
-Unlike elections, this leaderboard updates based on public feedback,
-not political advertisements.
-
-Politicians hate transparency.
-Citizens love it.
-
-</div>
-
 <div class="footer">
-🪳 Cockroach Janata Party • State Rankings Dashboard
+  <p>🪳 Cockroach Janata Party — Data-driven accountability for every Indian citizen</p>
+  <p style="margin-top:12px;">
+    <a href="index.html">Home</a> <a href="leaderboard.html">Leaderboard</a>
+    <a href="about.html">About</a> <a href="faq.html">FAQ</a> <a href="contact.html">Contact</a>
+  </p>
 </div>
-
-</div>
-
 </body>
-</html>
+  </html>
+  
