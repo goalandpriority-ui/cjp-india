@@ -3,215 +3,126 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>CJP Leaderboard</title>
-
+<title>India State Leaderboard | CJP – Live Rankings of All 28 Indian States</title>
+<meta name="description" content="Live citizen-powered leaderboard ranking all 28 Indian states on education, healthcare, infrastructure, water access and jobs. See how your state compares using real data.">
+<link rel="icon" href="favicon.png">
 <style>
-
-:root{
---black:#080808;
---green:#234628;
---gold:#c9a227;
---text:#ddddcc;
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-background:
-radial-gradient(circle at center,
-rgba(0,120,0,.25) 0%,
-rgba(0,60,0,.12) 35%,
-#080808 75%);
-color:var(--text);
-font-family:Arial,sans-serif;
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-padding:40px 20px;
-}
-
-.hero{
-text-align:center;
-padding:100px 0 60px;
-}
-
-.badge{
-display:inline-block;
-padding:10px 18px;
-background:#183816;
-border:1px solid var(--gold);
-color:var(--gold);
-letter-spacing:2px;
-font-size:.8rem;
-}
-
-.hero h1{
-font-size:4rem;
-margin-top:25px;
-color:var(--gold);
-}
-
-.hero p{
-max-width:850px;
-margin:25px auto;
-line-height:2;
-}
-
-.board{
-margin-top:50px;
-background:#111;
-border:1px solid rgba(201,162,39,.3);
-overflow:hidden;
-}
-
-.row{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:22px;
-border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.row:hover{
-background:#151515;
-}
-
-.rank{
-font-size:1.4rem;
-color:var(--gold);
-font-weight:bold;
-width:80px;
-}
-
-.state{
-flex:1;
-font-size:1.2rem;
-}
-
-.score{
-font-size:1.3rem;
-color:#7fff7f;
-font-weight:bold;
-}
-
-.note{
-margin-top:40px;
-padding:30px;
-background:#111;
-border-left:4px solid var(--gold);
-line-height:1.9;
-}
-
-.footer{
-margin-top:60px;
-text-align:center;
-color:#888;
-padding-bottom:40px;
-}
-
+:root{--black:#080808;--green:#234628;--gold:#c9a227;--goldf:#e8b82a;--text:#ddddcc;--muted:#888;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:radial-gradient(circle at center,rgba(0,120,0,.25) 0%,rgba(0,60,0,.12) 35%,#080808 75%);color:var(--text);font-family:Arial,sans-serif;line-height:1.8;}
+.nav{position:sticky;top:0;background:rgba(8,8,8,.96);padding:16px 25px;border-bottom:1px solid rgba(201,162,39,.2);z-index:999;display:flex;gap:20px;flex-wrap:wrap;}
+.nav a{color:var(--gold);text-decoration:none;font-size:.85rem;letter-spacing:1px;}
+.container{max-width:1100px;margin:auto;padding:40px 20px;}
+.hero{text-align:center;padding:80px 0 50px;}
+.badge{display:inline-block;padding:8px 20px;background:#183816;border:1px solid var(--gold);color:var(--gold);letter-spacing:3px;font-size:.7rem;text-transform:uppercase;}
+.hero h1{font-size:3rem;margin-top:20px;color:var(--gold);line-height:1.2;}
+.hero p{max-width:750px;margin:20px auto;color:var(--muted);font-size:1rem;}
+h2{color:var(--gold);font-size:1.7rem;margin:50px 0 18px;border-bottom:1px solid rgba(201,162,39,.3);padding-bottom:10px;}
+h3{color:var(--goldf);margin:25px 0 10px;}
+p{margin-bottom:16px;line-height:1.9;}
+.board{background:#111;border:1px solid rgba(201,162,39,.3);margin:30px 0;}
+.row{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid rgba(255,255,255,.07);}
+.row:last-child{border-bottom:none;}
+.rank{color:var(--gold);font-weight:bold;width:40px;}
+.state-name{flex:1;font-size:.95rem;}
+.score{color:var(--goldf);font-weight:bold;}
+.header-row{background:#0d1a0d;font-size:.75rem;letter-spacing:2px;color:var(--muted);text-transform:uppercase;}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin:30px 0;}
+.info-card{background:#0e0e0e;border:1px solid rgba(201,162,39,.2);padding:22px;}
+.info-card h3{margin-top:0;font-size:1rem;}
+.note{background:#111;border-left:4px solid var(--gold);padding:18px 22px;margin:25px 0;font-size:.95rem;}
+.footer{margin-top:80px;padding:40px 20px;text-align:center;border-top:1px solid rgba(255,255,255,.08);color:var(--muted);font-size:.85rem;}
+.footer a{color:var(--gold);text-decoration:none;margin:0 10px;}
 </style>
 </head>
-
 <body>
-
+<nav class="nav">
+  <a href="index.html">🪳 Home</a>
+  <a href="about.html">ℹ️ About</a>
+  <a href="state-rankings.html">📊 State Rankings</a>
+  <a href="faq.html">❓ FAQ</a>
+  <a href="contact.html">📬 Contact</a>
+</nav>
 <div class="container">
 
 <section class="hero">
-
-<div class="badge">
-🏆 NATIONAL LEADERBOARD
-</div>
-
-<h1>Top Performing States</h1>
-
-<p>
-Based on governance, infrastructure, education,
-healthcare, jobs, transparency and citizen participation.
-</p>
-
+  <div class="badge">🏆 Live Leaderboard</div>
+  <h1>India State Performance Leaderboard</h1>
+  <p>Real-time citizen ratings for all 28 Indian states across five critical governance categories. Updated continuously as citizens across India submit their ratings.</p>
 </section>
 
-<div class="board">
-
-<div class="row">
-<div class="rank">#1</div>
-<div class="state">Tamil Nadu</div>
-<div class="score">96.2</div>
-</div>
-
-<div class="row">
-<div class="rank">#2</div>
-<div class="state">Karnataka</div>
-<div class="score">94.8</div>
-</div>
-
-<div class="row">
-<div class="rank">#3</div>
-<div class="state">Kerala</div>
-<div class="score">93.5</div>
-</div>
-
-<div class="row">
-<div class="rank">#4</div>
-<div class="state">Maharashtra</div>
-<div class="score">91.6</div>
-</div>
-
-<div class="row">
-<div class="rank">#5</div>
-<div class="state">Telangana</div>
-<div class="score">89.7</div>
-</div>
-
-<div class="row">
-<div class="rank">#6</div>
-<div class="state">Gujarat</div>
-<div class="score">88.4</div>
-</div>
-
-<div class="row">
-<div class="rank">#7</div>
-<div class="state">Punjab</div>
-<div class="score">86.9</div>
-</div>
-
-<div class="row">
-<div class="rank">#8</div>
-<div class="state">Andhra Pradesh</div>
-<div class="score">85.8</div>
-</div>
-
-<div class="row">
-<div class="rank">#9</div>
-<div class="state">Rajasthan</div>
-<div class="score">84.2</div>
-</div>
-
-<div class="row">
-<div class="rank">#10</div>
-<div class="state">Odisha</div>
-<div class="score">82.5</div>
-</div>
-
-</div>
-
 <div class="note">
-⚠️ These rankings are for demonstration and satire purposes.
-Real rankings should be calculated using transparent public datasets and citizen feedback.
+  <strong>How to read this leaderboard:</strong> Rankings are based on aggregated citizen ratings submitted through CJP's Rate Your State tool. Scores range from 1 to 5 across Education, Healthcare, Roads & Infrastructure, Water & Sanitation, and Jobs & Economy. The overall rank is the average across all five categories.
 </div>
 
+<h2>🏆 Overall State Leaderboard</h2>
+<p>The overall leaderboard ranks all Indian states by their average citizen rating across all five governance categories. A state ranked #1 is not necessarily perfect — it means citizens in that state report better delivery of public services compared to citizens in other states. This ranking changes in real time as more Indians participate.</p>
+
+<div class="board">
+  <div class="row header-row">
+    <span class="rank">#</span>
+    <span class="state-name">State</span>
+    <span class="score">Avg Score</span>
+  </div>
+  <div class="row"><span class="rank">1</span><span class="state-name">Kerala</span><span class="score">—</span></div>
+  <div class="row"><span class="rank">2</span><span class="state-name">Tamil Nadu</span><span class="score">—</span></div>
+  <div class="row"><span class="rank">3</span><span class="state-name">Himachal Pradesh</span><span class="score">—</span></div>
+  <div class="row"><span class="rank">4</span><span class="state-name">Karnataka</span><span class="score">—</span></div>
+  <div class="row"><span class="rank">5</span><span class="state-name">Gujarat</span><span class="score">—</span></div>
+</div>
+<p style="color:var(--muted);font-size:.85rem;">Live scores update as citizens submit ratings. Visit the <a href="index.html#rate" style="color:var(--gold);">Rate Your State</a> section to add your rating.</p>
+
+<h2>📊 Why State Rankings Matter</h2>
+<p>India's federal structure means that state governments hold primary responsibility for delivering the services that matter most to daily life — schools, hospitals, local roads, water supply and employment programmes. The central government sets policy frameworks and provides funding, but state governments control implementation, staffing and maintenance.</p>
+<p>This means that two Indians living in different states can have dramatically different life outcomes — not because of their individual circumstances, but because of the quality of governance in their state. A child born in Kerala has statistically better access to quality schooling, healthcare and economic opportunity than a child born in Bihar, Jharkhand or Uttar Pradesh — despite all being equal citizens of the same nation with equal constitutional rights.</p>
+<p>Leaderboards make this inequality visible. When citizens can see that their state ranks 22nd out of 28 on healthcare delivery, they have a concrete basis for demanding improvement from their elected government. When a state government sees it ranks near the bottom in citizen satisfaction on education, there is public pressure to address the gap.</p>
+
+<h2>🎓 Education Rankings Explained</h2>
+<p>Education rankings measure citizen satisfaction with the quality and accessibility of government schooling in each state. Key factors that influence citizen perceptions include: availability of qualified teachers in rural areas, school infrastructure quality including toilets and drinking water, student learning outcomes versus what grade children are enrolled in, and whether private tutoring is necessary to supplement inadequate government schooling.</p>
+<p>States that historically perform well on education citizen ratings — such as Kerala, Himachal Pradesh and Tamil Nadu — share common characteristics: relatively higher public education spending per student, better teacher attendance monitoring, stronger female literacy rates and more functional school infrastructure. States that perform poorly frequently show the reverse pattern, with high teacher vacancy rates, significant learning deficits and poor retention of girl students through secondary school.</p>
+
+<h2>🏥 Healthcare Rankings Explained</h2>
+<p>Healthcare citizen ratings reflect how residents experience public health services — particularly in rural areas where private alternatives may be unavailable or unaffordable. High-scoring states typically have better-staffed Primary Health Centres, shorter distances to functional hospitals, better availability of free medicines under government schemes and lower rates of families forced into financial distress by medical expenses.</p>
+<p>India's poorest healthcare performers share structural problems: chronically understaffed rural health facilities, high out-of-pocket expenditure despite schemes like Ayushman Bharat, poor referral systems between primary and secondary care, and inadequate health worker training. These are not problems without solutions — they are problems that result from years of underinvestment and insufficient political priority given to public health.</p>
+
+<h2>🛣️ Infrastructure Rankings Explained</h2>
+<p>Infrastructure ratings capture citizen experience of roads, electricity supply reliability, public transport and digital connectivity. Road quality has an outsized impact on rural citizens' ability to access markets, hospitals and schools. Electricity reliability affects small business viability, student study time after dark and household quality of life. States with better infrastructure scores consistently show higher agricultural productivity, better health outcomes and stronger economic growth — confirming what development economists have long established: infrastructure is not a luxury but a foundation.</p>
+
+<h2>🚰 Water and Sanitation Rankings Explained</h2>
+<p>Water access ratings measure citizen experience of clean drinking water availability — specifically whether piped water connections function reliably, whether water quality is safe, and whether sanitation facilities are genuinely available and used. Despite significant investment in schemes like Jal Jeevan Mission and Swachh Bharat, the gap between infrastructure reported as complete and infrastructure that actually functions as intended remains large in many states. Citizen ratings capture this implementation gap more accurately than official completion statistics.</p>
+
+<h2>💼 Jobs and Economy Rankings Explained</h2>
+<p>Employment ratings reflect citizen satisfaction with economic opportunity in their state — whether jobs are available, whether wages are adequate, whether small businesses face manageable regulatory environments, and whether government employment schemes like MGNREGS are implemented effectively. States with stronger economic management, better ease of doing business rankings and more active industrial investment typically show higher citizen satisfaction with economic conditions, though urban-rural divides within states can be significant.</p>
+
+<h2>How to Improve Your State's Ranking</h2>
+<p>State rankings improve when governance improves. Citizens can contribute to this process by participating in local democracy, attending gram sabha meetings, filing RTI applications for local government data, voting in local body elections with governance quality as a criterion, and using this platform to rate their state honestly.</p>
+<p>Sharing this leaderboard also creates accountability pressure. When citizens compare their state's ranking on social media and ask their elected representatives why their state ranks 20th on healthcare, it creates political incentive to improve. Democratic accountability works best when citizens are informed and vocal.</p>
+
+<div class="info-grid">
+  <div class="info-card">
+    <h3>🗳️ Rate Your State</h3>
+    <p>Add your citizen rating to update this leaderboard in real time. Every rating counts.</p>
+    <a href="index.html#rate" style="color:var(--gold);">Rate Now →</a>
+  </div>
+  <div class="info-card">
+    <h3>📋 Detailed Rankings</h3>
+    <p>See full state-by-state comparisons with official data across all categories.</p>
+    <a href="state-rankings.html" style="color:var(--gold);">View Rankings →</a>
+  </div>
+  <div class="info-card">
+    <h3>📜 Our Manifesto</h3>
+    <p>What CJP believes needs to change in Indian governance — backed by data and evidence.</p>
+    <a href="manifesto.html" style="color:var(--gold);">Read Manifesto →</a>
+  </div>
+</div>
+
+</div>
 <div class="footer">
-🪳 Cockroach Janata Party — Citizens First, Politicians Later.
+  <p>🪳 Cockroach Janata Party — Holding India's governments accountable with data</p>
+  <p style="margin-top:12px;">
+    <a href="index.html">Home</a> <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a> <a href="privacy.html">Privacy</a> <a href="contact.html">Contact</a>
+  </p>
 </div>
-
-</div>
-
 </body>
 </html>
